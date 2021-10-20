@@ -1,0 +1,3 @@
+Express
+Prisma
+Sqlite
