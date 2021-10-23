@@ -1,0 +1,4 @@
+Prisma
+Express
+Node
+SQLite
