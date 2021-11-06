@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { createContext, ReactNode, useEffect } from 'react'
+import { createContext, ReactNode, useEffect, useState } from 'react'
 
 import { api } from '../services/api'
 
@@ -47,6 +46,7 @@ export function AuthProvider(props: AuthProvider) {
     localStorage.setItem('@dowhile:token', token)
 
     setUser(user)
+    console.log(token, user)
   }
 
   function signOut() {
@@ -71,7 +71,7 @@ export function AuthProvider(props: AuthProvider) {
     const hasGithubCode = url.includes('?code=')
 
     if (hasGithubCode) {
-      const [ urlWithoutCode, githubCode ] = url.split('?code=')
+      const [urlWithoutCode, githubCode] = url.split('?code=')
 
       window.history.pushState({}, '', urlWithoutCode)
 
