@@ -5,4 +5,3 @@ export const styles = StyleSheet.create({
     flex: 1
   }
 })
-// 17:30
