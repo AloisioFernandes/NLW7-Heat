@@ -1,16 +1,28 @@
 import React from 'react'
-import { View } from 'react-native'
+import { ScrollView } from 'react-native'
 
 import { Message } from '../Message'
 
 import { styles } from './styles'
 
 export function MessageList() {
+  const message = {
+    id: '1',
+    text: 'mensagem de teste',
+    user: {
+      name: 'Al',
+      avatar_url: 'https://github.com/AloisioFernandes.png'
+    }
+  }
   return (
-    <View style={styles.container}>
-      <Message />
-      <Message />
-      <Message />
-    </View>
+    <ScrollView 
+      style={styles.container}
+      contentContainerStyle={styles.content}
+      keyboardShouldPersistTaps="never"
+    >
+      <Message data={message} />
+      <Message data={message} />
+      <Message data={message} />
+    </ScrollView>
   )
 }
