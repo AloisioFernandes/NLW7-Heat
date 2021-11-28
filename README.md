@@ -4,3 +4,4 @@ Node
 SQLite
 WebSocket
 Axios
+Expo (expo login)
