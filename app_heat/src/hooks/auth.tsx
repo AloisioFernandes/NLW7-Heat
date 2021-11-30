@@ -48,6 +48,8 @@ function AuthProvider({ children }: AuthProviderProps) {
     if(params && params.code) {
       const authResponse = await api.post('/authenticate', { code: params.code })
       const { user, token } = authResponse.data as AuthResponse
+
+      api.defaults.headers.common['Authorization'] = `Bearer ${token}`
     }
 
     setIsSigningIn(false)
