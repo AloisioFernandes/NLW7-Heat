@@ -104,7 +104,6 @@ function AuthProvider({ children }: AuthProviderProps) {
 
 function useAuth() {
   const context = useContext(AuthContext)
-
   return context
 }
 
