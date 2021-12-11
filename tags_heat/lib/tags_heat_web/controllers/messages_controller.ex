@@ -7,4 +7,3 @@ defmodule TagsHeatWeb.MessagesController do
     text(conn,"RECEBI A REQUISIÇÃO")
   end
 end
-#22:00
