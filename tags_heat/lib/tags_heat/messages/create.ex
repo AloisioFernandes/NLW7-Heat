@@ -1,4 +1,4 @@
-defmodule TagsHeat.Message.Create do
+defmodule TagsHeat.Messages.Create do
   alias TagsHeat.{Message, Repo}
 
   def call(params) do

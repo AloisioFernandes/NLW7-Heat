@@ -1,9 +1,18 @@
 defmodule TagsHeatWeb.MessagesController do
   use TagsHeatWeb, :controller
 
-  def create(conn, params) do
-    IO.inspect(params)
+  alias TagsHeat.Message
+  alias TagsHeat.Messages.Create
 
-    text(conn,"RECEBI A REQUISIÇÃO")
+  def create(conn, params) do
+    params
+    |> Create.call()
+    |> handle_create(conn)
+  end
+
+  defp handle_create({:ok, %Message{}}, conn) do
+  end
+
+  defp handle_create({:error, %{result: result, status: status}}, conn) do
   end
 end
