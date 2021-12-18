@@ -10,9 +10,13 @@ defmodule TagsHeatWeb.MessagesController do
     |> handle_create(conn)
   end
 
-  defp handle_create({:ok, %Message{}}, conn) do
+  defp handle_create({:ok, %Message{} = message}, conn) do
+    conn
+    |> put_status(:created)
+    |> render("create.json", message: message)
   end
 
   defp handle_create({:error, %{result: result, status: status}}, conn) do
   end
 end
+# 57:30
