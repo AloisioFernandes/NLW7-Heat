@@ -17,6 +17,9 @@ defmodule TagsHeatWeb.MessagesController do
   end
 
   defp handle_create({:error, %{result: result, status: status}}, conn) do
+    conn
+    |> put_status(status)
+    |> put_view(TagsHeatWeb.ErrorView)
+    |> render("error.json", result: result)
   end
 end
-# 57:30

@@ -1,5 +1,5 @@
 defmodule TagsHeatWeb.MessagesView do
-  use HeatTagsWeb, :view
+  use TagsHeatWeb, :view
 
   def render("create.json", %{message: message}) do
     %{
