@@ -18,6 +18,7 @@ defmodule TagsHeat.Application do
       TagsHeatWeb.Endpoint
       # Start a worker by calling: TagsHeat.Worker.start_link(arg)
       # {TagsHeat.Worker, arg}
+      TagsHeat.Scheduler
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
